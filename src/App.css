@@ -1,3 +1,10 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+
+
 /* Global CSS */
 
 body{
@@ -24,7 +31,7 @@ p{
   --github: #e6e6e6;
   --darkblue: #2b2d3b;
   --black: #000000;
-  --white: #fff;
+  --white: #eeecec;
 
 }
 
@@ -158,7 +165,7 @@ h3{
   justify-content: space-between;
   align-items: center;
   padding: 15px 85.333px;
-  background: var(--white);
+  background: #dee5ec;
   box-shadow: 0px 5.333px 80px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -177,10 +184,10 @@ h3{
 }
 /* Navbar Content */
 .navbar--content {
-  color: var(--darkblue);
+  /* color: var(--darkblue); */
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 24px;
   cursor: pointer;
 }

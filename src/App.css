@@ -27,7 +27,7 @@ p{
 :root{
   --primary:  #8378ff;
   --heading:   #ffffff;
-  --bg-shade: #6fc8d2;
+  --bg-shade: #90CAF9;
   --github: #e6e6e6;
   --darkblue: #172fe7;
   --black: #000000;
@@ -165,7 +165,7 @@ h3{
   justify-content: space-between;
   align-items: center;
   padding: 15px 85.333px;
-  background: #e1e5e8;
+  background: #BBDEFB;
   box-shadow: 0px 5.333px 80px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;

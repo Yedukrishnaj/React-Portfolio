@@ -411,7 +411,7 @@ h3{
   border: none;
   border-radius: 15px;
   overflow: hidden;
-  position: relative;
+  position: static;
   transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 .btn-lg:hover{
@@ -519,7 +519,6 @@ input[type="checkbox"] {
   height: 21px;
   border: 0.15em solid var(--heading-color);
   border-radius: 0.15em;
-  transform: translatey(-0.075em);
 }
 /* Contact End */
 

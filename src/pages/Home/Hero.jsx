@@ -5,11 +5,12 @@ export default function Hero() {
                 <div className="hero-section-content">
                     <p className="section-title">Hey, I`m Yedu</p>
                     <h1 className="hero-section-title">
-                        <span className="hero-section-title-color">Computing and IT Management</span>{""}
+                        <span className="hero-section-title-color">QA Tester</span>{""}
                         <br/>
-                        Graduate
+                        
                     </h1>
-                    <p className="hero-section-description">Hello, I am a Masters graduate from Cardiff University. I have a strong passion for Computers and I am always eager to learn new skills and technologies related to my field of study. During my time as a student, I have gained valuable experience through various projects. These projects have helped me to improve my technical skills, work effectively in a team, and manage projects from start to finish. In my spare time, I enjoy watching movies and playing video games. Thank you for visiting my website!
+                    <p className="hero-section-description">I am a Computing and IT Management graduate turned Software Quality Assurance professional. Passionate about manual testing, problem-solving, and continuous learning. I also enjoy exploring new technologies, gaming, and a good movie night.<br/>Check out my projects, achievements, and social links. Let’s connect! 😊
+
                     </p>
                 </div>
                 <button className="btn btn-primary">Get in Touch</button>

@@ -25,13 +25,14 @@ p{
 }
 
 :root{
-  --primary:  #8378ff;
+  --primary:  #f27272;
   --heading:   #ffffff;
-  --bg-shade: #90CAF9;
+  --bg-shade: #d7f7d6;
   --github: #e6e6e6;
   --darkblue: #172fe7;
   --black: #000000;
-  --white: #eeecec;
+  --white: #d7f7d6;
+  --navbar:#e1f9c7;
 
 }
 
@@ -135,9 +136,7 @@ h3{
 
 /* Section Titles */
 
-/* Skills */
 
-/* About Me */
 .section-title{
   color: 
   var(--heading-color) ;
@@ -148,9 +147,9 @@ h3{
   line-height: 32px;
   display: flex;
   align-items: flex-start;
+  
 }
 
-/* Portfolio Contact Me */
 .sub-title{
   color: var(--heading-color);
   font-size: 16px;
@@ -158,14 +157,13 @@ h3{
   line-height: 24px;
 }
 
-/* Navbar */
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 85.333px;
-  background: #BBDEFB;
+  background: var(--navbar);
   box-shadow: 0px 5.333px 80px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -184,7 +182,6 @@ h3{
 }
 /* Navbar Content */
 .navbar--content {
-  /* color: var(--darkblue); */
   font-size: 16px;
   font-style: normal;
   font-weight: 800;
@@ -233,7 +230,7 @@ h3{
   color: var(--primary);
 }
 .hero-section-description{
-  color: var(--darkblue);
+  /* color: var(--darkblue); */
   font-size: 24px;
   font-weight: 400;
   list-style: 36px;
@@ -254,6 +251,7 @@ h3{
   justify-content: center;
   align-items: flex-start;
   gap: 106.667px;
+  background-color: #c4e5c2;
 }
 .skills--section--heading {
   color: var(--heading-color);
@@ -317,7 +315,7 @@ h3{
 }
 /* Skills Style Ends */
 
-/* About Us */
+/* About Me */
 
 .about--section{
   display: grid;
@@ -325,6 +323,7 @@ h3{
   align-items: center;
   gap: 114.6px;
   grid-template-columns: repeat(2,1fr);
+  background-color: #cdf2cb;
 }
 .about--section--img >img{
   width: 100%;
@@ -338,6 +337,7 @@ h3{
   flex-direction: column;
   align-items: flex-start;
   gap: 80px;
+  background-color: #c4e5c2;
 }
 .portfolio--container-box {
   display: flex;
@@ -460,6 +460,7 @@ h3{
   align-items: center;
   text-align: center;
   gap: 64px;
+  background-color: #d7f6d5;
 }
 .contact--form--container {
   display: grid;
@@ -529,7 +530,7 @@ input[type="checkbox"] {
   padding: 106.667px 85.333px;
   flex-direction: column;
   align-items: flex-start;
-  background: var(--bg-shade);
+  background: var(--navbar);
   align-items: center;
   align-self: stretch;
 }
@@ -571,7 +572,7 @@ input[type="checkbox"] {
   align-self: stretch;
 }
 .footer--content {
-  color: var(--black);
+  color: black;
   font-size: 18.667px;
   font-weight: 400;
   line-height: 28px;

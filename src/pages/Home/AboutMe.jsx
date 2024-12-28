@@ -9,11 +9,12 @@ export default function AboutMe(){
                     <p className="section--title">About</p>
                     <h1 className="skills-section--heading">AboutMe</h1>
                     <p className="hero--section--description">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni voluptatibus possimus corporis excepturi necessitatibus velit ea eius modi perferendis dignissimos veniam non temporibus doloremque soluta, ducimus recusandae. In, doloremque laborum?
+                    I’m a Software Quality Assurance professional with a Master’s in Computing and IT Management from Cardiff University. Originally a Computer Engineer, my interest in technology led me to transition into software testing, where I focus on ensuring high-quality and reliable software.
                     </p>
                     <p className="hero--section--description">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni voluptatibus possimus corporis excepturi necessitatibus velit ea eius modi perferendis dignissimos veniam non temporibus doloremque soluta, ducimus recusandae. In, doloremque laborum?
-                    </p>
+                    My expertise spans manual testing, defect tracking, and test case management, with experience in tools like Jira and TestRail. I’m passionate about continuous learning, exploring new technologies, and finding creative solutions to complex problems.
+                    </p><br/>
+                    <a href="./img/YedukrishnaJayanResume.pdf" target="_blank" class="btn btn-outline-primary"><strong>Download my CV</strong></a>
                     </div>
                     </div>        
             </section>

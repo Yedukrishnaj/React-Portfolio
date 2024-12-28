@@ -12,9 +12,7 @@ export default function MyPortfolio() {
         <div class="container">
     <div class="row">
         <div class="col-sm-3">
-            <a class="btn btn-lg" href="#">
-                <span>Visit My Github</span>
-            </a>
+            
         </div>
     </div>
 </div>

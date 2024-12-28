@@ -1,83 +1,29 @@
 export default function ContactMe() {
     return (
-      <section id="Contact" className="contact--section">
-        <div>
-          <p className="sub--title">Get In Touch</p>
-          <h2>Contact Me</h2>
-          <p className="text-lg">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, odit.
-          </p>
-        </div>
-        <form className="contact--form--container">
-          <div className="container">
-            <label htmlFor="first-name" className="contact--label">
-              <span className="text-md">First Name</span>
-              <input
-                type="text"
-                className="contact--input text-md"
-                name="first-name"
-                id="first-name"
-                required
-              />
-            </label>
-            <label htmlFor="last-name" className="contact--label">
-              <span className="text-md">Last Name</span>
-              <input
-                type="text"
-                className="contact--input text-md"
-                name="last-name"
-                id="last-name"
-                required
-              />
-            </label>
-            <label htmlFor="email" className="contact--label">
-              <span className="text-md">Email</span>
-              <input
-                type="email"
-                className="contact--input text-md"
-                name="email"
-                id="email"
-                required
-              />
-            </label>
-            <label htmlFor="phone-number" className="contact--label">
-              <span className="text-md">phone-number</span>
-              <input
-                type="number"
-                className="contact--input text-md"
-                name="phone-number"
-                id="phone-number"
-                required
-              />
-            </label>
-          </div>
-          <label htmlFor="choode-topic" className="contact--label">
-            <span className="text-md">Choose a topic</span>
-            <select id="choose-topic" className="contact--input text-md">
-              <option>Select One...</option>
-              <option>Item 1</option>
-              <option>Item 2</option>
-              <option>Item 3</option>
-            </select>
-          </label>
-          <label htmlFor="message" className="contact--label">
-            <span className="text-md">Message</span>
-            <textarea
-              className="contact--input text-md"
-              id="message"
-              rows="8"
-              placeholder="Type your message..."
-            />
-          </label>
-          <label htmlFor="checkbox" className="checkbox--label">
-            <input type="checkbox" required name="checkbox" id="checkbox" />
-            <span className="text-sm">I accept the terms</span>
-          </label>
-          <div>
-            <button className="btn btn-primary contact--form--btn">Submit</button>
-          </div>
-        </form>
-      </section>
+      <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:bg-gray-100 dark:text-gray-800">
+	<div className="flex flex-col justify-between ">
+		<div className="space-y-2">
+			<h2 className="text-4xl font-bold leading-tight lg:text-5xl">Let's talk!</h2>
+			<div className="dark:text-gray-600">Vivamus in nisl metus? Phasellus.</div>
+		</div>
+		<img src="assets/svg/doodle.svg" alt="" className="p-6 h-52 md:h-64" />
+	</div>
+	<form noValidate="" className="space-y-6">
+		<div>
+			<label htmlFor="name" className="text-sm">Full name</label>
+			<input id="name" type="text" placeholder="" className="w-full p-3 rounded dark:bg-gray-100" />
+		</div>
+		<div>
+			<label htmlFor="email" className="text-sm">Email</label>
+			<input id="email" type="email" className="w-full p-3 rounded dark:bg-gray-100" />
+		</div>
+		<div>
+			<label htmlFor="message" className="text-sm">Message</label>
+			<textarea id="message" rows="3" className="w-full p-3 rounded dark:bg-gray-100"></textarea>
+		</div>
+		<button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase roundedbtn btn btn-primary">Send Message</button>
+	</form>
+</div>
     );
   }
   

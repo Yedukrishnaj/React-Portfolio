@@ -453,14 +453,14 @@ h3{
 }
 
 .contact--section {
-  display: flex;
+  /* display: flex;
   padding: 150px 85px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 64px;
-  background-color: #d7f6d5;
+  gap: 64px; */
+  background-color: #f7fef6;
 }
 .contact--form--container {
   display: grid;

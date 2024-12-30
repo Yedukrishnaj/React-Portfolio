@@ -3,10 +3,11 @@ import data from "../../data/index.json";
 export default function MyPortfolio() {
   return (
     <section className="portfolio--section" id="MyPortfolio">
+            {/* Section Break Line */}
+            <div className="section-break"></div>     
       <div className="portfolio--container-box">
         <div className="portfolio--container">
-          <p className="sub--title">Recent Projects</p>
-          <h2 className="section--heading">My Portfolio</h2>
+          <h2 className="portfolio--section--heading">My Portfolio</h2>
         </div>
       </div>
       <div className="portfolio--section--container">
@@ -47,6 +48,7 @@ export default function MyPortfolio() {
           </div>
         ))}
       </div>
+         
     </section>
   );
 }

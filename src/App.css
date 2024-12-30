@@ -29,14 +29,14 @@ p{
   --heading:   #ffffff;
   --bg-shade: #faf9f0; 
   --github: #e6e6e6;
-  --darkblue: #172fe7;
+  /* --darkblue: #172fe7; */
   --black: #000000;
   --white: #faf9f0; 
-  --navbar:#edebca;
-  --portfolio:#edece3;  
-  --about:#faf9f0; 
+  --navbar:#f6f6f1;
+  --portfolio:#0b0b0cf6; 
+  --about:#0b0b0cf6; 
   --contact:#121435; 
-  --skills:#edece3;  
+  --skills:#0b0b0cf6; 
 
 }
 
@@ -237,7 +237,7 @@ h3{
   color: var(--primary);
 }
 .hero-section-description{
-  /* color: var(--darkblue); */
+  color: var(--darkblue);
   font-size: 24px;
   font-weight: 400;
   list-style: 36px;
@@ -261,7 +261,7 @@ h3{
   background: var(--skills);
 }
 .skills--section--heading {
-  color: var(--heading-color);
+  color: var(--primary);
   font-size: 64px;
   font-weight: 700;
   line-height: 77px;
@@ -333,8 +333,8 @@ h3{
   background: var(--about);
 }
 .about--section--img >img{
-  width: 100%;
-  height: 100%;
+  width: 66%;
+  height: 66%;
 }
 
 /* My Portfolio Starts */
@@ -410,7 +410,10 @@ h3{
   align-self: stretch;
 }
 .portfolio--section--title {
-  color: var(--heading-color);
+  color: var(--primary);
+}
+.portfolio--section--heading{
+  color: var(--primary);
 }
 .portfolio--link {
   text-decoration: none;
@@ -688,14 +691,12 @@ input[type="checkbox"] {
     padding-top: 0;
     padding-bottom: 0;
   }
-  .testimonial--section--card {
-    padding: 25px;
-  }
   .hero--section--title,
   .skills--section--heading,
   .sections--heading {
     font-size: 35px;
     line-height: 40px;
+    color: var(--primary);
   }
   .hero--section--content--box {
     gap: 10px;
@@ -792,3 +793,10 @@ input[type="checkbox"] {
 }
 
 /* Responsive Screens Ends*/
+
+.section-break {
+  width: 100%;
+  height: 2px;  /* Adjust the thickness of the line */
+  background-color: var(--primary);  /* Use your primary color or any color you prefer */
+  margin: 20px 0;  /* Add margin before and after the line for spacing */
+}

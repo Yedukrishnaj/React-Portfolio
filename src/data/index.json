@@ -3,50 +3,50 @@
     {
       "id": "1",
       "src": "./img/coding.png",
-      "title": "Software Development",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
+      "title": "Web Development",
+      "description": "  Proficient in developing web applications, with experience in agile development practices and delivering quality products."
     },
     {
       "id": "2",
       "src": "./img/test.png",
       "title": "Software Testing",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
+      "description": "      Skilled in manual testing, functional QA processes, and defect management. Adept at ensuring software reliability and usability for end-users."
     },
     {
       "id": "3",
       "src": "./img/python.png",
       "title": "Python",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
+      "description": " Experienced in using Python for problem solving, and developing Flask-based web applications to streamline workflows.."
     },
     {
       "id": "4",
       "src": "./img/html.png",
       "title": "HTML5/CSS",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
+      "description": " Proficient in building responsive and visually appealing web designs using HTML5 and CSS, ensuring cross-browser compatibility."
     },
     {
       "id": "5",
      "src": "./img/js.png",
       "title": "JavaScript",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
+      "description": "Skilled in JavaScript for creating dynamic and interactive web experiences, with experience in frameworks like Bootstrap and React."
     },
     {
       "id": "6",
       "src": "./img/project.png",
       "title": "Jira",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
+      "description": "      Experienced in using Jira for defect tracking, sprint planning, and enhancing team collaboration to meet project deadlines efficiently."
     },
     {
       "id": "7",
       "src": "./img/sql.png",
       "title": "SQL",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
+      "description": " Proficient in writing complex SQL queries for data extraction and manipulation, ensuring efficient database operations and insights."
     },
     {
       "id": "8",
       "src": "./img/java.png",
       "title": "Java",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique"
+      "description": " Currently learning automation testing with Java and Selenium Webdriver, to develop and maintain automated test scripts."
     }
   ],
   

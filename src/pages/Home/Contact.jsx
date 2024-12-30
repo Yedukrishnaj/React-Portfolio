@@ -29,7 +29,7 @@ export default function ContactMe() {
             <h2 className="text-4xl font-bold leading-tight lg:text-5xl">Let's talk!</h2>
             <div className="text-black-400">Please Fill the Contact Form.</div>
           </div>
-          <img src="assets/svg/doodle.svg" alt="Contact Illustration" className="p-6 h-52 md:h-64" />
+          <img src="./img/e.png" alt="Contact Illustration"/>
         </div>
         <form noValidate="" ref={form} onSubmit={sendEmail} className="space-y-6">
           <div>

@@ -53,28 +53,28 @@
   "portfolio": [
     {
       "id": "1",
-      "src": "./img/placeholder-image-1.png",
+      "src": "./img/doc.jpg",
       "title": "The HealthCare Hub",
       "description": "Designed and developed a healthcare platform addressing the needs of international students in the UK. ",
       "link": "https://github.com/Yedukrishnaj/TheHealthcareHub"
     },
     {
       "id": "2",
-      "src": "./img/placeholder-image-1.png",
+      "src": "./img/web.jpg",
       "title": "Personal Portfolio Website",
       "description": "Built a personal portfolio website using Flask, HTML, CSS, and Bootstrap.",
       "link": "https://github.com/Yedukrishnaj/Portfolio"
     },
     {
       "id": "3",
-      "src": "./img/placeholder-image-2.png",
+      "src": "./img/ai.jpg",
       "title": "Clickbait Detection in YouTube Videos",
       "description": "Coordinated experimentation to extract features using learning algorithms.",
       "link": "https://github.com/Yedukrishnaj/Clickbait-Detection"
     },
     {
       "id": "4",
-      "src": "./img/placeholder-image-2.png",
+      "src": "./img/game.jpg",
       "title": "The Golden Bird",
       "description": "Led the development of a Tower Defence video game using Unity.",
       "link": "https://github.com/Yedukrishnaj/The-Golden-Bird"

@@ -112,7 +112,7 @@ function Footer() {
       <div className="footer--content--container">
         <p className="footer--content">Made with React and ❤️ by Yedu</p>
         <div className="footer--social--icon">
-        <a href="https://www.freepik.com/" target="blank" title="icons">Icons created by Freepik</a>
+        <a href="https://www.freepik.com/" target="blank" title="icons">Icons created by Freepik</a><br/>
         <a href="http://www.freepik.com">Hero Background Image Designed by pikisuperstar / Freepik</a>
         </div>
       </div>

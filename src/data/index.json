@@ -62,8 +62,8 @@
       "id": "2",
       "src": "./img/web.jpg",
       "title": "Personal Portfolio Website",
-      "description": "Built a personal portfolio website using Flask, HTML, CSS, and Bootstrap.",
-      "link": "https://github.com/Yedukrishnaj/Portfolio"
+      "description": "Built a personal portfolio website using React, HTML, CSS, and Tailwind.",
+      "link": "https://github.com/Yedukrishnaj/React-Portfolio"
     },
     {
       "id": "3",

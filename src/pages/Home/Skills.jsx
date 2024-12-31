@@ -14,18 +14,18 @@ export default function MySkills() {
         {data?.skills?.map((item, index) => (
           <div
             key={index}
-            className="skills--section--card bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-all flex flex-col"
+            className="skills--section--card bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-all flex flex-col h-full"
           >
             <div className="skills--section--img p-4 flex-shrink-0">
               <img
                 src={item.src}
                 alt={item.title}
-                className="w-full h-40 object-cover rounded-t-lg"
+                className="w-full h-40 sm:h-36 md:h-32 lg:h-40 object-cover rounded-t-lg"
               />
             </div>
-            <div className="skills--section--card--content p-4 flex-grow">
+            <div className="skills--section--card--content p-4 flex-grow flex flex-col justify-between">
               <h3 className="skills--section--title text-xl sm:text-2xl font-bold mb-2">{item.title}</h3>
-              <p className="skills--section--description text-gray-600 text-sm sm:text-base">{item.description}</p>
+              <p className="skills--section--description text-gray-600 text-sm sm:text-base flex-grow">{item.description}</p>
             </div>
           </div>
         ))}

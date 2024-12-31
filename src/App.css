@@ -71,7 +71,7 @@ p{
   /* --darkblue: #172fe7; */
   --black: #000000;
   --white: #faf9f0; 
-  --navbar:#f6f6f1;
+  --navbar:#e9e9e8;
   --portfolio:linear-gradient(to right, #0f2027, #203a43, #2c5364);
   --about:linear-gradient(to right, #0f2027, #203a43, #2c5364);
   --contact:linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -333,6 +333,7 @@ h3{
 .skills--section--img {
   display: flex;
   padding: 13.3px;
+ 
   justify-content: center;
   align-items: center;
   gap: 13.3px;
@@ -405,7 +406,7 @@ h3{
 }
 
 .portfolio--section--container {
-  background: var(--portfolio);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1043,9 +1044,6 @@ input[type="checkbox"] {
     padding: 1rem;
   }
 
-  .skills--section--img img {
-    height: 10rem; /* Smaller image height for mobile */
-  }
 
   .skills--section--title {
     font-size: 1.125rem; /* Slightly smaller font size for titles */
@@ -1062,9 +1060,6 @@ input[type="checkbox"] {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
   }
 
-  .skills--section--img img {
-    height: 11rem; /* Slightly larger image height for tablets */
-  }
 
   .skills--section--title {
     font-size: 1.25rem; /* Adjust title size for tablets */
@@ -1081,9 +1076,7 @@ input[type="checkbox"] {
     grid-template-columns: repeat(3, 1fr); /* 3 columns for desktops */
   }
 
-  .skills--section--img img {
-    height: 14rem; /* Larger image height for desktop */
-  }
+
 
   .skills--section--title {
     font-size: 1.5rem; /* Larger title size for desktop */
@@ -1100,9 +1093,6 @@ input[type="checkbox"] {
     grid-template-columns: repeat(4, 1fr); /* 4 columns for larger desktops */
   }
 
-  .skills--section--img img {
-    height: 16rem; /* Even larger image height for larger screens */
-  }
 
   .skills--section--title {
     font-size: 1.75rem; /* Even larger title font size */

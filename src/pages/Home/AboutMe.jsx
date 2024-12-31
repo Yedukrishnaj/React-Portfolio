@@ -13,7 +13,7 @@ export default function AboutMe(){
                     <p className="hero--section--description text-white">
                     My expertise spans manual testing, defect tracking, and test case management, with experience in tools like Jira and TestRail. I’m passionate about continuous learning, exploring new technologies, and finding creative solutions to complex problems.
                     </p><br/>
-                    <a href="./img/YedukrishnaJayanResume.pdf" target="_blank" class="btn btn-outline-primary"><strong>Download my CV</strong></a>
+                    <a href="./img/YedukrishnaJayanResume.pdf" target="_blank" class="btn btn-primary"><strong>Download my CV</strong></a>
                     </div>
                     </div>   
                  

@@ -16,9 +16,7 @@ export default function Hero() {
     <section
       id="HeroSection"
       className="hero-section relative bg-cover bg-center h-screen flex flex-col items-start justify-center text-white px-6 md:px-12"
-      // style={{ backgroundImage: 'url(/img/5184015.jpg)' }}
     >
-      {/* <div className="absolute inset-0 bg-black opacity-30"></div> Overlay */}
 
       <div className="relative container mx-auto z-10 flex flex-col justify-center space-y-6">
         <p
@@ -34,7 +32,7 @@ export default function Hero() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           } text-left`}
         >
-          <div className="keyboard">
+          <div className="keyboard flex justify-center space-x-2">
             <span className="key">W</span>
             <span className="key">E</span>
             <span className="key">L</span>
@@ -58,11 +56,10 @@ export default function Hero() {
         </div>
         
       </div>
-      <DotLottieReact
-      src="img\Animation - 1735651984060.lottie"
-      loop
-      autoplay
-    />
+      {/* Lottie Animation */}
+      <div className="lottie-container">
+          <DotLottieReact src="img/Animation - 1735651984060.lottie" loop autoplay />
+        </div>
     
     </section>
   );

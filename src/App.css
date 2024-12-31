@@ -6,6 +6,45 @@
 
 
 /* Global CSS */
+/* Apply background color to both html and body */
+html, body {
+  height: 100%;
+  background-color: var(--portfolio); /* Set the background color to the desired color */
+}
+
+/* Prevent flicker during load */
+body {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+}
+
+body.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+/* Ensure the page content doesn't shift unexpectedly */
+#root, .App {
+  height: 100%;
+}
+
+
+/* Global Styles */
+body {
+  background-color: var(--portfolio); /* Ensure a default background color is set */
+  min-height: 100vh; /* Ensure the body takes up the entire viewport */
+}
+
+html {
+  background-color: var(--portfolio); /* Ensure HTML background is also set */
+}
+
+/* Additional global reset for a clean load */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body{
   margin: 0;
@@ -345,15 +384,18 @@ h3{
   flex-direction: column;
   align-items: flex-start;
   gap: 80px;
+  background-color: #f0f0f0;
   background: var(--portfolio);
- 
+  transition: background-color 0.5s ease;
 }
+
 .portfolio--container-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
+
 .portfolio--container {
   display: flex;
   flex-direction: column;
@@ -361,13 +403,18 @@ h3{
   gap: 21.3px;
   position: relative;
 }
+
 .portfolio--section--container {
+  background: var(--portfolio);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 42.6px;
   width: 100%;
+  flex-wrap: wrap; /* Ensure cards wrap in smaller screens */
+  justify-content: space-between; /* Space out the cards */
 }
+
 .portfolio--section--img {
   width: 100%;
   height: 180px; /* Fixed height for images */
@@ -375,32 +422,33 @@ h3{
   border-radius: 15px; /* Rounded edges for images */
   transition: transform 0.3s ease; /* Smooth zoom effect */
 }
+
 .portfolio--section--img > img {
   width: 100%;
 }
-.portfolio--section--card:hover .portfolio--section--img img {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
+
 .portfolio--section--card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
-  flex: 1 0 0;
+  flex: 1 0 21%; /* Ensures equal width and gives responsive flexbox behavior */
   background: #fff;
-  height: 100%;
   box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   border-radius: 20px; /* Rounded edges */
-  overflow: hidden; 
+  overflow: hidden;
+  min-height: 400px; /* Set a consistent minimum height for all cards */
 }
+
 .portfolio--section--card:hover {
   transform: translateY(-8px); /* Slight lift effect */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
   background: #fcf9f3; /* Slightly lighter background on hover */
 }
+
 .portfolio--section--card--content {
   display: flex;
   padding: 32px;
@@ -410,12 +458,15 @@ h3{
   flex-grow: 1; 
   align-self: stretch;
 }
+
 .portfolio--section--title {
   color: var(--primary);
 }
-.portfolio--section--heading{
+
+.portfolio--section--heading {
   color: var(--primary);
 }
+
 .portfolio--link {
   text-decoration: none;
   display: flex;
@@ -425,13 +476,19 @@ h3{
   font-weight: 600;
   margin-top: auto;
 }
+
 .portfolio--link:hover {
-  color: #ff5200;  /* Change to hover color */
+  color: #ff5200; /* Change to hover color */
 }
+
 .portfolio--section--card:hover path {
   stroke: #6b5000;
 }
-/* Portfolio Ends */
+
+
+
+
+
 
 .btn-lg{
   color: #fff;
@@ -937,3 +994,186 @@ input[type="checkbox"] {
 
 
 
+@media (max-width: 1200px) {
+  .hero-section {
+    padding-top: 4rem; /* Adjust padding for smaller screens */
+    padding-bottom: 4rem;
+  }
+
+  .hero-section-title {
+    font-size: 2rem; /* Smaller heading for mobile */
+  }
+
+  .hero-section-description {
+    font-size: 0.875rem; /* Smaller description text */
+  }
+}
+
+/* Mobile (small devices) */
+@media (max-width: 639px) {
+  .keyboard {
+    font-size: 1rem; /* Smaller font size for mobile */
+    gap: 0.2rem; /* Reduce space between letters */
+  }
+
+  .lottie-container {
+    width: 100%; /* Make the animation take full width on small screens */
+  }
+}
+
+/* Tablet and small screens (larger than 640px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .keyboard {
+    font-size: 1.2rem; /* Slightly larger for tablets */
+    gap: 0.3rem; /* Slightly more space between letters */
+  }
+
+  .lottie-container {
+    width: 70%; /* Adjust Lottie animation size for medium screens */
+  }
+}
+
+/* Mobile Styles (max-width: 639px) */
+@media (max-width: 639px) {
+  .skills--section--container {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
+
+  .skills--section--card {
+    padding: 1rem;
+  }
+
+  .skills--section--img img {
+    height: 10rem; /* Smaller image height for mobile */
+  }
+
+  .skills--section--title {
+    font-size: 1.125rem; /* Slightly smaller font size for titles */
+  }
+
+  .skills--section--description {
+    font-size: 0.875rem; /* Smaller text for descriptions */
+  }
+}
+
+/* Tablet Styles (min-width: 640px and max-width: 1023px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .skills--section--container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+
+  .skills--section--img img {
+    height: 11rem; /* Slightly larger image height for tablets */
+  }
+
+  .skills--section--title {
+    font-size: 1.25rem; /* Adjust title size for tablets */
+  }
+
+  .skills--section--description {
+    font-size: 1rem; /* Keep description text readable */
+  }
+}
+
+/* Desktop Styles (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .skills--section--container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktops */
+  }
+
+  .skills--section--img img {
+    height: 14rem; /* Larger image height for desktop */
+  }
+
+  .skills--section--title {
+    font-size: 1.5rem; /* Larger title size for desktop */
+  }
+
+  .skills--section--description {
+    font-size: 1.125rem; /* Larger description text for readability */
+  }
+}
+
+/* Large Desktop Styles (min-width: 1280px) */
+@media (min-width: 1280px) {
+  .skills--section--container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger desktops */
+  }
+
+  .skills--section--img img {
+    height: 16rem; /* Even larger image height for larger screens */
+  }
+
+  .skills--section--title {
+    font-size: 1.75rem; /* Even larger title font size */
+  }
+
+  .skills--section--description {
+    font-size: 1.25rem; /* Slightly larger description text */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 639px) {
+  .about--section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2rem; /* Added gap at the top */
+    padding-bottom: 2rem; /* Added gap at the bottom */
+  }
+
+  .about--section--img img {
+    max-width: 200px;
+  }
+
+  .hero--section--content--box {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .skills--section--heading {
+    font-size: 1.5rem;
+  }
+
+  .hero--section--description {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .about--section {
+    flex-direction: row;
+  }
+
+  .about--section--img img {
+    max-width: 250px;
+  }
+
+  .skills--section--heading {
+    font-size: 1.75rem;
+  }
+
+  .hero--section--description {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .about--section {
+    flex-direction: row;
+  }
+
+  .about--section--img img {
+    max-width: 300px;
+  }
+
+  .hero--section--heading {
+    font-size: 2rem;
+  }
+
+  .hero--section--description {
+    font-size: 1.125rem;
+  }
+}

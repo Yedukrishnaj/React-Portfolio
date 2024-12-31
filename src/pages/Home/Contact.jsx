@@ -17,7 +17,7 @@ export default function ContactMe() {
         (error) => {
           console.error('Error:', error.text);
           alert('Failed to send message. Please try again later.');
-        },
+        }
       );
   };
 
@@ -27,47 +27,48 @@ export default function ContactMe() {
         <div className="flex flex-col justify-between">
           <div className="space-y-2">
             <h2 className="text-4xl font-bold leading-tight lg:text-5xl">Let's talk!</h2>
-            <div className="text-black-400">Please Fill the Contact Form.</div>
+            <div className="text-black-400">Please fill the contact form.</div>
           </div>
-          <img src="./img/e.png" alt="Contact Illustration"/>
+          <img src="./img/e.png" alt="Contact Illustration" className="mt-4 md:mt-0" />
         </div>
-        <form noValidate="" ref={form} onSubmit={sendEmail} className="space-y-6">
+
+        <form noValidate ref={form} onSubmit={sendEmail} className="space-y-6">
           <div>
-            <label htmlFor="name" className="text-sm">Full name</label>
+            <label htmlFor="name" className="text-sm sm:text-base">Full name</label>
             <input
               type="text"
               name="user_name"
               id="name"
               placeholder="Enter your full name"
-              className="w-full p-3 rounded"
+              className="w-full p-3 rounded border border-gray-300 text-sm sm:text-base"
               required
             />
           </div>
           <div>
-            <label htmlFor="email" className="text-sm">Email</label>
+            <label htmlFor="email" className="text-sm sm:text-base">Email</label>
             <input
               id="email"
               name="user_email"
               type="email"
-              className="w-full p-3 rounded"
+              className="w-full p-3 rounded border border-gray-300 text-sm sm:text-base"
               placeholder="Enter your email address"
               required
             />
           </div>
           <div>
-            <label htmlFor="message" className="text-sm">Message</label>
+            <label htmlFor="message" className="text-sm sm:text-base">Message</label>
             <textarea
               id="message"
               name="message"
-              rows="3"
-              className="w-full p-3 rounded"
+              rows="4"
+              className="w-full p-3 rounded border border-gray-300 text-sm sm:text-base"
               placeholder="Enter your message"
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded btn-primary text-gray-900"
+            className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded btn-primary text-gray-900 bg-blue-500 hover:bg-blue-700 transition"
           >
             Send Message
           </button>

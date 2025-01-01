@@ -20,7 +20,7 @@ export default function MySkills() {
               <img
                 src={item.src}
                 alt={item.title}
-                className="w-full h-40 sm:h-36 md:h-32 lg:h-40 object-cover rounded-t-lg"
+                className="w-full object-cover rounded-t-lg"
               />
             </div>
             <div className="skills--section--card--content p-4 flex-grow flex flex-col justify-between">

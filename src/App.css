@@ -333,14 +333,21 @@ h3{
 .skills--section--img {
   display: flex;
   padding: 13.3px;
- 
   justify-content: center;
   align-items: center;
   gap: 13.3px;
   border-radius: 10.6px;
   background: #fff;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensures it scales properly */
+  height: auto; /* Maintain aspect ratio */
 }
+.skills--section--img img {
+  width: 100%; /* Fill the container */
+  height: auto; /* Maintain the natural aspect ratio */
+  object-fit: contain; /* Prevent cutoff */
+}
+
 .skills--section--card--content {
   display: flex;
   flex-direction: column;
@@ -360,6 +367,70 @@ h3{
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
+}
+
+/* Responsive Styles for Images */
+@media (max-width: 768px) {
+  .skills--section--img {
+    height: auto; /* Allow height to adjust based on content */
+    max-height: 120px; /* Optional: Limit max height for tablets */
+  }
+
+  .skills--section--img img {
+    width: 100%; /* Scale down while maintaining aspect ratio */
+    height: auto;
+    object-fit: contain; /* Prevent cropping or cutoff */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills--section--img {
+    height: auto; /* Flexible height for smaller screens */
+    max-height: 100px; /* Optional: Set a maximum height */
+  }
+
+  .skills--section--img img {
+    width: 100%; /* Ensure full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent cropping */
+  }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+
+  .skills--section--heading {
+    font-size: 48px; /* Smaller heading size for tablets */
+    line-height: 56px;
+  }
+
+  .skills--section--title {
+    font-size: 24px; /* Smaller title size for tablets */
+    line-height: 32px;
+  }
+
+  .skills--section--description {
+    font-size: 18px; /* Smaller description for tablets */
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .skills--section--heading {
+    font-size: 36px; /* Further reduce heading size for mobile */
+    line-height: 44px;
+  }
+
+  .skills--section--title {
+    font-size: 20px; /* Smaller title size for mobile */
+    line-height: 28px;
+  }
+
+  .skills--section--description {
+    font-size: 16px; /* Smaller description for mobile */
+    line-height: 24px;
+  }
 }
 /* Skills Style Ends */
 
@@ -622,6 +693,68 @@ input[type="checkbox"] {
   height: 21px;
   border: 0.15em solid var(--heading-color);
   border-radius: 0.15em;
+}
+
+/* Mobile Media Query */
+@media (max-width: 768px) {
+  .contact--section {
+    padding: 80px 20px; /* Reduce padding for mobile */
+  }
+
+  /* Make form fields take up full width on small screens */
+  .contact--form--container {
+    width: 100%;
+  }
+
+  .contact--input {
+    padding: 12px; /* Smaller padding on mobile */
+  }
+
+  .contact--label {
+    gap: 8px; /* Reduce gap between label and input on mobile */
+  }
+
+  .contact--input,
+  select {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .checkbox--label {
+    font-size: 14px; /* Reduce font size for checkbox label */
+  }
+
+  .contact--label label {
+    font-size: 16px; /* Smaller label font size on mobile */
+  }
+
+  /* Make the button full width on mobile */
+  button[type="submit"] {
+    width: 100%;
+  }
+
+  /* Image adjustments on mobile */
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  /* Further reduce padding for very small screens */
+  .contact--section {
+    padding: 50px 15px;
+  }
+
+  /* Decrease font size further on very small screens */
+  .contact--label label,
+  .contact--input,
+  select {
+    font-size: 12px;
+  }
+
+  /* Stack form fields on very small screens */
+  .contact--form--container {
+    grid-template-columns: 1fr;
+  }
 }
 /* Contact End */
 
@@ -1029,9 +1162,6 @@ input[type="checkbox"] {
     gap: 0.2rem; /* Reduce space between letters */
   }
 
-  .lottie-container {
-    width: 100%; /* Make the animation take full width on small screens */
-  }
 }
 
 /* Tablet and small screens (larger than 640px) */
@@ -1041,79 +1171,10 @@ input[type="checkbox"] {
     gap: 0.3rem; /* Slightly more space between letters */
   }
 
-  .lottie-container {
-    width: 70%; /* Adjust Lottie animation size for medium screens */
-  }
+ 
 }
 
-/* Mobile Styles (max-width: 639px) */
-@media (max-width: 639px) {
-  .skills--section--container {
-    grid-template-columns: 1fr; /* Single column for small screens */
-  }
 
-  .skills--section--card {
-    padding: 1rem;
-  }
-
-
-  .skills--section--title {
-    font-size: 1.125rem; /* Slightly smaller font size for titles */
-  }
-
-  .skills--section--description {
-    font-size: 0.875rem; /* Smaller text for descriptions */
-  }
-}
-
-/* Tablet Styles (min-width: 640px and max-width: 1023px) */
-@media (min-width: 640px) and (max-width: 1023px) {
-  .skills--section--container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-  }
-
-
-  .skills--section--title {
-    font-size: 1.25rem; /* Adjust title size for tablets */
-  }
-
-  .skills--section--description {
-    font-size: 1rem; /* Keep description text readable */
-  }
-}
-
-/* Desktop Styles (min-width: 1024px) */
-@media (min-width: 1024px) {
-  .skills--section--container {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktops */
-  }
-
-
-
-  .skills--section--title {
-    font-size: 1.5rem; /* Larger title size for desktop */
-  }
-
-  .skills--section--description {
-    font-size: 1.125rem; /* Larger description text for readability */
-  }
-}
-
-/* Large Desktop Styles (min-width: 1280px) */
-@media (min-width: 1280px) {
-  .skills--section--container {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger desktops */
-  }
-
-
-  .skills--section--title {
-    font-size: 1.75rem; /* Even larger title font size */
-  }
-
-  .skills--section--description {
-    font-size: 1.25rem; /* Slightly larger description text */
-  }
-}
 
 /* Mobile Styles */
 @media (max-width: 639px) {
@@ -1142,25 +1203,6 @@ input[type="checkbox"] {
   }
 }
 
-/* Tablet Styles */
-@media (min-width: 640px) and (max-width: 1023px) {
-  .about--section {
-    flex-direction: row;
-  }
-
-  .about--section--img img {
-    max-width: 250px;
-  }
-
-  .skills--section--heading {
-    font-size: 1.75rem;
-  }
-
-  .hero--section--description {
-    font-size: 1.1rem;
-  }
-}
-
 /* Desktop Styles */
 @media (min-width: 1024px) {
   .about--section {
@@ -1168,7 +1210,7 @@ input[type="checkbox"] {
   }
 
   .about--section--img img {
-    max-width: 300px;
+    max-width: 1500px;
   }
 
   .hero--section--heading {

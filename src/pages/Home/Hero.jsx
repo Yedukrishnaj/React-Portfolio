@@ -58,7 +58,7 @@ export default function Hero() {
       </div>
       {/* Lottie Animation */}
       <div className="lottie-container">
-          <DotLottieReact src="img/Animation - 1735651984060.lottie" loop autoplay />
+          <DotLottieReact src="img/Animation - 1735651984060.lottie" autoplay />
         </div>
     
     </section>

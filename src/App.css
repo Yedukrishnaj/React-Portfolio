@@ -401,7 +401,7 @@ h3{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 21.3px;
+  gap: 18.3px;
   position: relative;
 }
 
@@ -410,7 +410,7 @@ h3{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 42.6px;
+  gap: 35.6px;
   width: 100%;
   flex-wrap: wrap; /* Ensure cards wrap in smaller screens */
   justify-content: space-between; /* Space out the cards */
@@ -418,30 +418,30 @@ h3{
 
 .portfolio--section--img {
   width: 100%;
-  height: 180px; /* Fixed height for images */
-  object-fit: cover; /* Ensures images fill the space without distortion */
-  border-radius: 15px; /* Rounded edges for images */
-  transition: transform 0.3s ease; /* Smooth zoom effect */
+  height: 180px; /* Fixed height for image container */
+  overflow: hidden;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
-.portfolio--section--img > img {
+.portfolio--section--img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fits without distortion */
 }
 
 .portfolio--section--card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 32px;
-  flex: 1 0 21%; /* Ensures equal width and gives responsive flexbox behavior */
+  justify-content: space-between; /* Ensures content is evenly spaced */
+  align-items: stretch; /* Makes all cards stretch to the same size */
+  flex: 1 0 21%; /* Adjust width and ensure equal size for flex items */
+  min-height: 500px; /* Set a minimum height for all cards */
+  max-height: 500px; /* Prevent cards from growing taller than this */
   background: #fff;
-  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  border-radius: 20px; /* Rounded edges */
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
   overflow: hidden;
-  min-height: 400px; /* Set a consistent minimum height for all cards */
+  transition: all 0.3s ease-in-out;
 }
 
 .portfolio--section--card:hover {
@@ -452,12 +452,14 @@ h3{
 
 .portfolio--section--card--content {
   display: flex;
-  padding: 32px;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 32px;
-  flex-grow: 1; 
-  align-self: stretch;
+  justify-content: space-between;
+  padding: 20px;
+  flex-grow: 1; /* Ensures content takes up remaining space */
+}
+
+.portfolio--section--card--content > * {
+  margin-bottom: auto; /* Add space between elements */
 }
 
 .portfolio--section--title {
@@ -486,6 +488,16 @@ h3{
   stroke: #6b5000;
 }
 
+@media (max-width: 768px) {
+  .portfolio--section--card {
+    flex: 1 0 100%; /* Make cards full-width */
+    min-height: auto; /* Remove fixed height to allow for natural wrapping */
+  }
+
+  .portfolio--section--img {
+    height: 150px; /* Reduce image height for smaller screens */
+  }
+}
 
 
 
@@ -1167,3 +1179,4 @@ input[type="checkbox"] {
     font-size: 1.125rem;
   }
 }
+

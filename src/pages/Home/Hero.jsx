@@ -7,7 +7,7 @@ export default function Hero() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsVisible(true);
-    }, 500); 
+    }, 500); // Delay to make the animation smooth
 
     return () => clearTimeout(timeout);
   }, []);
@@ -17,7 +17,6 @@ export default function Hero() {
       id="HeroSection"
       className="hero-section relative bg-cover bg-center h-screen flex flex-col items-start justify-center text-white px-6 md:px-12"
     >
-
       <div className="relative container mx-auto z-10 flex flex-col justify-center space-y-6">
         <p
           className={`section-title text-lg font-semibold transition-all duration-1000 ${
@@ -51,16 +50,13 @@ export default function Hero() {
           Hi, my name is Yedukrishna Jayan, a Software Quality Assurance professional currently based in Liverpool, UK.
         </p>
 
-        <div className="mt-auto">
-         
-        </div>
-        
+        <div className="mt-auto"></div>
       </div>
+
       {/* Lottie Animation */}
-      <div className="lottie-container">
-          <DotLottieReact src="img/Animation - 1735651984060.lottie" autoplay />
-        </div>
-    
+      <div className="lottie-container mb-8 md:mb-0 order-1 md:order-0">
+        <DotLottieReact src="img/Animation - 1735651984060.lottie" autoplay />
+      </div>
     </section>
   );
 }

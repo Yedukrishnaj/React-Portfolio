@@ -1222,3 +1222,37 @@ input[type="checkbox"] {
   }
 }
 
+/* Lottie Animation container */
+.lottie-container {
+  width: 100%; /* Full width on mobile */
+  max-width: 600px; /* Optional: restrict max width */
+  height: auto; /* Allow it to scale proportionally */
+  margin: 0 auto; /* Center the Lottie animation */
+}
+
+/* On smaller screens, we adjust the order */
+@media (max-width: 768px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column-reverse; /* Reverse order of elements for mobile */
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Make the Lottie animation container appear above the text */
+  .lottie-container {
+    order: -1; /* Place the animation above the text */
+    width: 80%; /* Make it 80% of the container's width on mobile */
+    height: 300px; /* Fixed height on mobile */
+  }
+}
+
+/* For larger screens (e.g., above 768px), make sure the layout stays as is */
+@media (min-width: 769px) {
+  .hero-section {
+    display: flex;
+    flex-direction: row; /* Default row layout */
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

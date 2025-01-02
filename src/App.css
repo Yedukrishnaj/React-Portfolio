@@ -923,8 +923,7 @@ input[type="checkbox"] {
   }
 }
 
-/* Hamburger menu  */
-
+/* Hamburger Menu */
 .nav__hamburger {
   display: none;
   width: 1.875rem;
@@ -934,69 +933,94 @@ input[type="checkbox"] {
   position: absolute;
   top: 25px;
   right: 25px;
+  cursor: pointer; /* Ensure pointer cursor for better UX */
+  z-index: 200; /* Ensure it stays above other elements */
 }
 
 .nav__hamburger__line {
-  display: block;
   height: 0.188rem;
   width: 100%;
-  background-color: #000000;
+  background-color: #000;
   border-radius: 0.625rem;
-  transition: all ease-in-out 0.2s;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
+/* Hamburger Visibility for Mobile */
 @media screen and (max-width: 1200px) {
   .nav__hamburger {
     display: flex;
-    z-index: 200;
-  }
-  .navbar--items {
-    display: flex;
-  }
-  .navbar--items {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255);
-    top: -20rem;
-    left: 0;
-    width: 100%;
-    transition: all ease-in-out 0.4s;
-  }
-  .navbar--items ul {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 3rem 0 0.6rem;
-    z-index: -100;
-  }
-  .navbar--items ul li {
-    text-align: center;
-  }
-  .navbar--items ul li a {
-    padding: 0.5rem;
-  }
-  .navbar--items {
-    z-index: -1000;
-  }
-  .navbar--items.active {
-    top: 30px;
-  }
-  .nav__hamburger.active :nth-child(1) {
-    transform: rotate(45deg) translate(0.45rem, 0.1875rem);
-  }
-
-  .nav__hamburger.active :nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav__hamburger.active :nth-child(3) {
-    transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
   }
 }
 
-/* Responsive Screens Ends*/
+  @media screen and (max-width: 1200px) {
+    .navbar--items {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      top: -100%;
+      left: 0;
+      right: 20px; /* Moved further left by increasing the value */
+      width: 100%;
+      background-color: var(--navbar);
+      transition: top 0.3s ease-in-out;
+      z-index: 100;
+      padding: 0.3rem 0; /* Further reduced padding */
+    }
+  
+    .navbar--items.active {
+      top: 0;
+    }
+  
+    .navbar--items ul {
+      flex-direction: column;
+      width: 100%;
+      padding: 0.5rem 0; /* Further reduced padding between items */
+      list-style: none;
+    }
+  
+    .navbar--items ul li {
+      text-align: center;
+      margin: 0.3rem 0; /* Further reduced margin between menu items */
+    }
+  
+    .navbar--items ul li a {
+      padding: 0.3rem 0.5rem; /* Reduced padding inside links */
+      color: #000;
+      text-decoration: none;
+      font-size: 0.9rem; /* Slightly smaller font size */
+      transition: color 0.2s ease-in-out;
+    }
+  
+    .navbar--items ul li a:hover {
+      color: #007bff; /* Highlight color on hover */
+    }
+  
+    .nav__hamburger {
+      display: flex;
+      position: absolute;
+      top: 15px; /* Adjusted top position */
+      right: 25px;
+    }
+  
+    .nav__hamburger__line {
+      height: 0.15rem; /* Reduced line height for a smaller button */
+    }
+  
+ /* Hamburger Animation */
+ .nav__hamburger.active .nav__hamburger__line:nth-child(1) {
+  transform: rotate(45deg) translate(0.3rem, 0.3rem);
+}
+
+.nav__hamburger.active .nav__hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__hamburger.active .nav__hamburger__line:nth-child(3) {
+  transform: rotate(-45deg) translate(0.3rem, -0.3rem);
+}
+}
 
 .section-break {
   width: 100%;
@@ -1178,30 +1202,51 @@ input[type="checkbox"] {
 
 /* Mobile Styles */
 @media (max-width: 639px) {
+  /* About Section */
   .about--section {
     flex-direction: column;
     text-align: center;
-    padding-top: 2rem; /* Added gap at the top */
-    padding-bottom: 2rem; /* Added gap at the bottom */
+    padding: 2rem 1rem; /* Add consistent padding for top, bottom, and sides */
+    gap: 1rem; /* Ensure proper spacing between elements */
   }
 
   .about--section--img img {
-    max-width: 200px;
+    max-width: 250px;
+    height: auto; /* Ensure aspect ratio is preserved */
+    margin: 0 auto; /* Center the image */
   }
 
+  /* Hero Section */
   .hero--section--content--box {
     margin-left: 0;
     text-align: center;
-  }
-
-  .skills--section--heading {
-    font-size: 1.5rem;
+    padding: 1rem; /* Add padding for better spacing */
   }
 
   .hero--section--description {
     font-size: 1rem;
+    line-height: 1.5rem; /* Improve readability */
+  }
+
+  /* Skills Section */
+  .skills--section--heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; /* Add space below heading */
+  }
+
+  /* Ensure skill cards align properly */
+  .skills--section--container {
+    grid-template-columns: repeat(1, 1fr); /* One card per row */
+    gap: 1rem; /* Space between rows */
+  }
+
+  /* Miscellaneous Adjustments */
+  button {
+    font-size: 0.875rem; /* Ensure buttons scale well on small screens */
+    padding: 0.75rem 1rem; /* Adjust padding for touch-friendly buttons */
   }
 }
+
 
 /* Desktop Styles */
 @media (min-width: 1024px) {

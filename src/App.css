@@ -206,7 +206,7 @@ h3{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 85.333px;
+  padding: 1rem 85.333px;
   background: var(--navbar);
   box-shadow: 0px 5.333px 80px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -267,7 +267,6 @@ h3{
 }
 
 .hero-section-title{
-  /* color: var(--heading-color); */
   font-size: 74.667px;
   font-weight: 700;
   line-height: 90px;
@@ -983,7 +982,7 @@ input[type="checkbox"] {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 770px) {
   .btn-outline-primary {
     display: none;
   }
@@ -1079,6 +1078,9 @@ input[type="checkbox"] {
 
 /* Hamburger Visibility for Mobile */
 @media screen and (max-width: 1200px) {
+  /* .navbar{
+    padding: 0.5rem 0;
+  } */
   .nav__hamburger {
     display: flex;
   }
@@ -1091,7 +1093,7 @@ input[type="checkbox"] {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      top: -100%;
+      top: -150%;
       left: 0;
       /* right: 20px;  */
       width: 100%;
@@ -1153,7 +1155,10 @@ input[type="checkbox"] {
   transform: rotate(-45deg) translate(0.3rem, -0.3rem);
 }
 }
-@media screen and (min-width: 640px) and (max-width: 1200px) {
+@media screen and (min-width: 120px) and (max-width: 1200px) {
+  /* .navbar{
+    padding: 0.5rem 0;
+  } */
   .nav__hamburger {
     top: 20px; /* Adjusted for tablets */
     right: 20px; /* Position closer to the right edge */
@@ -1163,7 +1168,7 @@ input[type="checkbox"] {
 
   .navbar--items {
     top: -15rem; /* Reduce the hidden height */
-    background-color: rgba(255, 255, 255, 0.95); /* Slight transparency for style */
+    background-color: var(--navbar); /* Slight transparency for style */
     transition: all ease-in-out 0.3s;
   }
 
@@ -1364,6 +1369,7 @@ input[type="checkbox"] {
 /* Tablet and small screens (larger than 640px) */
 @media (min-width: 640px) and (max-width: 1200px) {
   .keyboard {
+    justify-content: center;
     font-size: 1.2rem; /* Slightly larger for tablets */
     gap: 0.3rem; /* Slightly more space between letters */
   }

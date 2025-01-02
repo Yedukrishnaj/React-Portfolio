@@ -31,7 +31,7 @@ export default function Hero() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           } text-left`}
         >
-          <div className="keyboard flex justify-center space-x-2">
+          <div className="keyboard flex space-x-2">
             <span className="key">W</span>
             <span className="key">E</span>
             <span className="key">L</span>

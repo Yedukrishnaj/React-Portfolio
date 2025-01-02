@@ -374,7 +374,7 @@ h3{
 }
 
 /* Optimized Styles for Tablets (max-width: 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .skills--section {
     padding: 100px 50px; /* Adjust padding for smaller tablet sizes */
   }
@@ -545,7 +545,7 @@ h3{
   height: 66%;
 }
 
-/* My Portfolio Starts */
+/* Portfolio Section Styles */
 .portfolio--section {
   display: flex;
   padding: 112px 85px;
@@ -573,7 +573,6 @@ h3{
 }
 
 .portfolio--section--container {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -581,6 +580,7 @@ h3{
   width: 100%;
   flex-wrap: wrap; /* Ensure cards wrap in smaller screens */
   justify-content: space-between; /* Space out the cards */
+  flex-direction: row; /* Ensure the cards are laid out in a row (default) */
 }
 
 .portfolio--section--img {
@@ -655,19 +655,64 @@ h3{
   stroke: #6b5000;
 }
 
-@media (max-width: 768px) {
+/* Medium and Tablet Screens (768px to 1024px) */
+@media (max-width: 1200px) {
+  .portfolio--section--container {
+    gap: 24px; /* Adjust the spacing between cards */
+    justify-content: center;
+  }
+
   .portfolio--section--card {
-    flex: 1 0 100%; /* Make cards full-width */
-    min-height: auto; /* Remove fixed height to allow for natural wrapping */
+    flex: 1 0 48%; /* Make cards take up less space (2 per row) */
+    min-height: 400px; /* Adjust the minimum height of the cards */
+    max-height: 400px; /* Prevent cards from growing taller */
+  }
+}
+
+/* Mobile Screens (Below 768px) */
+@media (max-width: 768px) {
+  .portfolio--section--container {
+    gap: 16px; /* Reduce the gap for smaller screens */
+    justify-content: center;
+  }
+
+  .portfolio--section--card {
+    flex: 1 0 100%; /* Make cards full width */
+    min-height: auto; /* Allow the height to adjust naturally */
+    max-height: none; /* Remove the max height */
   }
 
   .portfolio--section--img {
     height: 150px; /* Reduce image height for smaller screens */
   }
+
+  .portfolio--link {
+    font-size: 14px; /* Adjust link font size for mobile */
+  }
 }
 
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  .portfolio--section--card {
+    min-height: 300px; /* Further reduce minimum height for mobile */
+  }
 
+  .portfolio--section--img {
+    height: 130px; /* Further reduce image height for mobile */
+  }
 
+  .portfolio--section--heading {
+    font-size: 32px; /* Smaller heading size for mobile */
+  }
+
+  .portfolio--section--title {
+    font-size: 18px; /* Smaller title size for mobile */
+  }
+
+  .portfolio--section--card--content {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+}
 
 
 .btn-lg{
@@ -961,8 +1006,6 @@ input[type="checkbox"] {
   }
   .skills--section--container,
   .about--section,
-  .portfolio--section--container,
-  .portfolio--container-box,
   .footer--link--container,
   .footer--items > ul,
   .footer--content--container {
@@ -1326,7 +1369,7 @@ input[type="checkbox"] {
 }
 
 /* Tablet and small screens (larger than 640px) */
-@media (min-width: 640px) and (max-width: 1023px) {
+@media (min-width: 640px) and (max-width: 1200px) {
   .keyboard {
     font-size: 1.2rem; /* Slightly larger for tablets */
     gap: 0.3rem; /* Slightly more space between letters */
@@ -1386,13 +1429,14 @@ input[type="checkbox"] {
 
 
 /* Desktop Styles */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .about--section {
     flex-direction: row;
   }
 
   .about--section--img img {
     max-width: 1500px;
+    align-content: center;
   }
 
   .hero--section--heading {
@@ -1413,7 +1457,7 @@ input[type="checkbox"] {
 }
 
 /* On smaller screens, we adjust the order */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .hero-section {
     display: flex;
     flex-direction: column-reverse; /* Reverse order of elements for mobile */
@@ -1429,12 +1473,3 @@ input[type="checkbox"] {
   }
 }
 
-/* For larger screens (e.g., above 768px), make sure the layout stays as is */
-@media (min-width: 769px) {
-  .hero-section {
-    display: flex;
-    flex-direction: row; /* Default row layout */
-    justify-content: flex-start;
-    align-items: center;
-  }
-}

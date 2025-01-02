@@ -961,12 +961,12 @@ input[type="checkbox"] {
       justify-content: center;
       top: -100%;
       left: 0;
-      right: 20px; /* Moved further left by increasing the value */
+      /* right: 20px;  */
       width: 100%;
       background-color: var(--navbar);
       transition: top 0.3s ease-in-out;
       z-index: 100;
-      padding: 0.3rem 0; /* Further reduced padding */
+      padding: 0.3rem 0;
     }
   
     .navbar--items.active {
@@ -1020,6 +1020,47 @@ input[type="checkbox"] {
 .nav__hamburger.active .nav__hamburger__line:nth-child(3) {
   transform: rotate(-45deg) translate(0.3rem, -0.3rem);
 }
+}
+@media screen and (min-width: 640px) and (max-width: 1200px) {
+  .nav__hamburger {
+    top: 20px; /* Adjusted for tablets */
+    right: 20px; /* Position closer to the right edge */
+    width: 2rem; /* Slightly larger icon */
+    height: 1.5rem;
+  }
+
+  .navbar--items {
+    top: -15rem; /* Reduce the hidden height */
+    background-color: rgba(255, 255, 255, 0.95); /* Slight transparency for style */
+    transition: all ease-in-out 0.3s;
+  }
+
+  .navbar--items ul {
+    padding: 2rem 0 0.5rem; /* Reduced padding */
+    gap: 1rem; /* Slightly larger gaps between items */
+  }
+
+  .navbar--items.active {
+    top: 40px; /* Adjust the dropdown position */
+  }
+
+  .navbar--items ul li a {
+    font-size: 1.125rem; /* Slightly larger text */
+    padding: 0.75rem 1rem; /* Comfortable tap size */
+  }
+
+  .nav__hamburger.active :nth-child(1) {
+    transform: rotate(45deg) translate(0.3rem, 0.2rem);
+  }
+
+  .nav__hamburger.active :nth-child(2) {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .nav__hamburger.active :nth-child(3) {
+    transform: rotate(-45deg) translate(0.3rem, -0.2rem);
+  }
 }
 
 .section-break {

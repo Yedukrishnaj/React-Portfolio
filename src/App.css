@@ -1062,10 +1062,10 @@ input[type="checkbox"] {
   flex-direction: column;
   justify-content: space-around;
   position: absolute;
-  top: 25px;
+  top: 50px;
   right: 25px;
-  cursor: pointer; /* Ensure pointer cursor for better UX */
-  z-index: 200; /* Ensure it stays above other elements */
+  cursor: pointer;
+  z-index: 200;
 }
 
 .nav__hamburger__line {
@@ -1078,112 +1078,106 @@ input[type="checkbox"] {
 
 /* Hamburger Visibility for Mobile */
 @media screen and (max-width: 1200px) {
-  /* .navbar{
-    padding: 0.5rem 0;
-  } */
   .nav__hamburger {
     display: flex;
   }
-}
 
-  @media screen and (max-width: 1200px) {
-    .navbar--items {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      top: -150%;
-      left: 0;
-      /* right: 20px;  */
-      width: 100%;
-      background-color: var(--navbar);
-      transition: top 0.3s ease-in-out;
-      z-index: 100;
-      padding: 0.3rem 0;
-    }
-  
-    .navbar--items.active {
-      top: 0;
-    }
-  
-    .navbar--items ul {
-      flex-direction: column;
-      width: 100%;
-      padding: 0.5rem 0; /* Further reduced padding between items */
-      list-style: none;
-    }
-  
-    .navbar--items ul li {
-      text-align: center;
-      margin: 0.3rem 0; /* Further reduced margin between menu items */
-    }
-  
-    .navbar--items ul li a {
-      padding: 0.3rem 0.5rem; /* Reduced padding inside links */
-      color: #000;
-      text-decoration: none;
-      font-size: 0.9rem; /* Slightly smaller font size */
-      transition: color 0.2s ease-in-out;
-    }
-  
-    .navbar--items ul li a:hover {
-      color: #007bff; /* Highlight color on hover */
-    }
-  
-    .nav__hamburger {
-      display: flex;
-      position: absolute;
-      top: 15px; /* Adjusted top position */
-      right: 25px;
-    }
-  
-    .nav__hamburger__line {
-      height: 0.15rem; /* Reduced line height for a smaller button */
-    }
-  
- /* Hamburger Animation */
- .nav__hamburger.active .nav__hamburger__line:nth-child(1) {
-  transform: rotate(45deg) translate(0.3rem, 0.3rem);
-}
+  .navbar--items {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: -150%; /* Initially hidden */
+    left: 0;
+    width: 100%;
+    background-color: var(--navbar);
+    transition: top 0.3s ease-in-out;
+    z-index: 100;
+    padding: 0.3rem 0;
+  }
 
-.nav__hamburger.active .nav__hamburger__line:nth-child(2) {
-  opacity: 0;
-}
+  /* Adding space when active */
+  .navbar--items.active {
+    top: 30px; /* Increased top value to add space at the top */
+  }
 
-.nav__hamburger.active .nav__hamburger__line:nth-child(3) {
-  transform: rotate(-45deg) translate(0.3rem, -0.3rem);
-}
-}
-@media screen and (min-width: 120px) and (max-width: 1200px) {
-  /* .navbar{
+  .navbar--items ul {
+    flex-direction: column;
+    width: 100%;
     padding: 0.5rem 0;
-  } */
+    list-style: none;
+  }
+
+  .navbar--items ul li {
+    text-align: center;
+    margin: 0.3rem 0;
+  }
+
+  .navbar--items ul li a {
+    padding: 0.3rem 0.5rem;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .navbar--items ul li a:hover {
+    color: #007bff;
+  }
+
   .nav__hamburger {
-    top: 20px; /* Adjusted for tablets */
-    right: 20px; /* Position closer to the right edge */
-    width: 2rem; /* Slightly larger icon */
+    display: flex;
+    position: absolute;
+    top: 15px; /* Adjusted top position */
+    right: 25px;
+  }
+
+  .nav__hamburger__line {
+    height: 0.15rem;
+  }
+
+  /* Hamburger Animation */
+  .nav__hamburger.active .nav__hamburger__line:nth-child(1) {
+    transform: rotate(45deg) translate(0.3rem, 0.3rem);
+  }
+
+  .nav__hamburger.active .nav__hamburger__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav__hamburger.active .nav__hamburger__line:nth-child(3) {
+    transform: rotate(-45deg) translate(0.3rem, -0.3rem);
+  }
+}
+
+@media screen and (min-width: 120px) and (max-width: 1200px) {
+
+  .nav__hamburger {
+    top: 10px;
+    right: 20px;
+    width: 2rem;
     height: 1.5rem;
   }
 
   .navbar--items {
-    top: -15rem; /* Reduce the hidden height */
-    background-color: var(--navbar); /* Slight transparency for style */
+    top: -15rem;
+    background-color: var(--navbar);
     transition: all ease-in-out 0.3s;
   }
 
   .navbar--items ul {
-    padding: 2rem 0 0.5rem; /* Reduced padding */
-    gap: 1rem; /* Slightly larger gaps between items */
+    padding: 2rem 0 0.5rem;
+    gap: 1rem;
   }
 
   .navbar--items.active {
-    top: 40px; /* Adjust the dropdown position */
+    top: 20px; /* Adjust the dropdown position */
   }
 
   .navbar--items ul li a {
-    font-size: 1.125rem; /* Slightly larger text */
-    padding: 0.75rem 1rem; /* Comfortable tap size */
+    font-size: 1.125rem;
+    padding: 0.75rem 1rem;
   }
 
   .nav__hamburger.active :nth-child(1) {
@@ -1199,6 +1193,7 @@ input[type="checkbox"] {
     transform: rotate(-45deg) translate(0.3rem, -0.2rem);
   }
 }
+
 
 .section-break {
   width: 100%;

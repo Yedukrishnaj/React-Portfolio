@@ -53,14 +53,14 @@
   "portfolio": [
     {
       "id": "1",
-      "src": "./img/doc.jpg",
+      "src": "./img/doc-min.jpg",
       "title": "The HealthCare Hub",
       "description": "Designed and developed a healthcare platform addressing the needs of international students in the UK. ",
       "link": "https://github.com/Yedukrishnaj/TheHealthcareHub"
     },
     {
       "id": "2",
-      "src": "./img/web.jpg",
+      "src": "./img/web-min.jpg",
       "title": "Personal Portfolio Website",
       "description": "Built a personal portfolio website using React, HTML, CSS, and Tailwind.",
       "link": "https://github.com/Yedukrishnaj/React-Portfolio"
@@ -74,7 +74,7 @@
     },
     {
       "id": "4",
-      "src": "./img/game.jpg",
+      "src": "./img/game-min.jpg",
       "title": "The Golden Bird",
       "description": "Led the development of a Tower Defence video game using Unity.",
       "link": "https://github.com/Yedukrishnaj/The-Golden-Bird"

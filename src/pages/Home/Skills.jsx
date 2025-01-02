@@ -16,7 +16,7 @@ export default function MySkills() {
             key={index}
             className="skills--section--card bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-all flex flex-col h-full"
           >
-            <div className="skills--section--img p-4 flex-shrink-0">
+            <div className="skills--section--img p-4 ">
               <img
                 src={item.src}
                 alt={item.title}

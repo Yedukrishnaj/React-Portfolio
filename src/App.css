@@ -330,6 +330,7 @@ h3{
 .skills--section--card:hover .skills--section--description {
   color: var(--darkblue);
 }
+/* Skills Section Style */
 .skills--section--img {
   display: flex;
   padding: 13.3px;
@@ -340,12 +341,15 @@ h3{
   background: #fff;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
   width: 100%; /* Ensures it scales properly */
-  height: auto; /* Maintain aspect ratio */
+  height: 100%; /* Ensure the height adjusts properly */
+  max-height: 150px; /* Max height to prevent overflow */
 }
+
 .skills--section--img img {
-  width: 100%; /* Fill the container */
-  height: auto; /* Maintain the natural aspect ratio */
-  object-fit: contain; /* Prevent cutoff */
+  width: 100%; /* Scale image to fill the container */
+  height: 100%; /* Ensure the image fills the height of the container */
+  object-fit: contain; /* Maintain aspect ratio without cropping */
+  object-position: center; /* Center the image in the container */
 }
 
 .skills--section--card--content {
@@ -369,70 +373,162 @@ h3{
   line-height: 32px;
 }
 
-/* Responsive Styles for Images */
-@media (max-width: 768px) {
-  .skills--section--img {
-    height: auto; /* Allow height to adjust based on content */
-    max-height: 120px; /* Optional: Limit max height for tablets */
+/* Optimized Styles for Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .skills--section {
+    padding: 100px 50px; /* Adjust padding for smaller tablet sizes */
   }
-
-  .skills--section--img img {
-    width: 100%; /* Scale down while maintaining aspect ratio */
-    height: auto;
-    object-fit: contain; /* Prevent cropping or cutoff */
-  }
-}
-
-@media (max-width: 480px) {
-  .skills--section--img {
-    height: auto; /* Flexible height for smaller screens */
-    max-height: 100px; /* Optional: Set a maximum height */
-  }
-
-  .skills--section--img img {
-    width: 100%; /* Ensure full width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Prevent cropping */
-  }
-}
-
-/* Responsive Styles for Mobile */
-@media (max-width: 768px) {
 
   .skills--section--heading {
-    font-size: 48px; /* Smaller heading size for tablets */
+    font-size: 54px; /* Reduced size for tablets */
+    line-height: 64px;
+  }
+
+  .skills--section--container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns instead of 4 for better layout */
+  }
+
+  .skills--section--card {
+    padding: 24px; /* Reduced padding for smaller screens */
+    min-height: 220px; /* Reduced height for a more compact look */
+  }
+
+  .skills--section--title {
+    font-size: 28px; /* Smaller titles on tablets */
+    line-height: 38px;
+  }
+
+  .skills--section--description {
+    font-size: 18px; /* Reduced description font size */
+    line-height: 28px;
+  }
+
+
+}
+
+/* Optimized Styles for Medium Screens (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .skills--section {
+    padding: 120px 70px; /* Adjust padding for medium screens */
+  }
+
+  .skills--section--heading {
+    font-size: 60px; /* Slightly reduced for better fit */
+    line-height: 72px;
+  }
+
+  .skills--section--container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+  }
+
+  .skills--section--card {
+    padding: 28px; /* Adjusted padding */
+    min-height: 230px; /* Slightly taller cards */
+  }
+
+  .skills--section--title {
+    font-size: 30px; /* Slightly larger title size for medium screens */
+    line-height: 42px;
+  }
+
+  .skills--section--description {
+    font-size: 20px; /* Increased description font size */
+    line-height: 32px;
+  }
+
+}
+
+/* Further optimization for Mobile Screens */
+@media (max-width: 768px) {
+  .skills--section--heading {
+    font-size: 48px; /* Further reduced font size for smaller tablets */
     line-height: 56px;
   }
 
   .skills--section--title {
-    font-size: 24px; /* Smaller title size for tablets */
+    font-size: 24px; /* Smaller title size */
     line-height: 32px;
   }
 
   .skills--section--description {
-    font-size: 18px; /* Smaller description for tablets */
+    font-size: 18px; /* Smaller description */
     line-height: 28px;
   }
 }
 
 @media (max-width: 480px) {
-
   .skills--section--heading {
-    font-size: 36px; /* Further reduce heading size for mobile */
+    font-size: 36px; /* Smaller heading size for mobile */
     line-height: 44px;
   }
 
   .skills--section--title {
-    font-size: 20px; /* Smaller title size for mobile */
+    font-size: 20px; /* Even smaller titles */
     line-height: 28px;
   }
 
   .skills--section--description {
-    font-size: 16px; /* Smaller description for mobile */
+    font-size: 16px; /* Adjust description text size */
     line-height: 24px;
   }
 }
-/* Skills Style Ends */
+/* Tablet and medium screen optimization */
+@media (min-width: 440px) and (max-width: 1200px) {
+  /* Ensure the container has grid layout with space between the image and text */
+  .skills--section--container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Split into 2 columns */
+    gap: 20px; /* Add some gap between columns */
+    align-items: center; /* Center content vertically in the columns */
+  }
+
+  .skills--section--img {
+    width: 100%;
+    max-width: 300px; /* Control image size */
+    height: auto;
+    margin: 0 auto; /* Center image horizontally */
+    padding-top: 120px; /* Add padding to the top to avoid clipping */
+    padding-bottom: 100px;
+  }
+
+  /* Ensure the image scales well */
+  .skills--section--img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure no cropping */
+  }
+
+  /* Ensure text doesn’t overlap with image */
+  .skills--section--card--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px; /* Add gap between text elements */
+  }
+
+  .skills--section--title,
+  .skills--section--description {
+    text-align: left; /* Ensure text is left-aligned */
+    margin: 0; /* Remove margin */
+  }
+}
+
+/* For smaller screens */
+@media (max-width: 440px) {
+  .skills--section--container {
+    display: block; /* Stack text and image on top of each other */
+    gap: 20px; /* Add gap between stacked content */
+  }
+
+  .skills--section--img {
+    max-width: 100%; /* Full width for small screens */
+    padding-top: 15px; /* Add padding to the top for small screens as well */
+  }
+
+  .skills--section--card--content {
+    display: block;
+  }
+}
 
 /* About Me */
 
